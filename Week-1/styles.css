@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+  
+body {
+    font-family: lato, sans-serif; 
+    overflow-x: hidden;
+    width: 100%;  
+    display: grid;
+    grid-template-rows: 30vh 55vh 15vh;
+    grid-template-columns: 4vw 96vw;
+}
+
+section {
+    grid-row: 1 / span 2;
+    display: flex;
+    flex-direction: column;
+    background-color: #dfdfdf;
+    height: 88vh;
+    width: 4vw;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    justify-content: space-around;
+}
+
+table{
+    width: 100vw;
+    text-align: left;
+}
+
+.even {
+    background-color: #e2e2e2;
+}
+
+td{
+    padding: 1rem;
+}
+
+header {
+    background-color: rgb(60, 60, 60);
+    color: #fff;
+    display: flex;
+}
+
+.catty-img-large {
+    padding: 1.5rem;
+}
+
+.catty-icons {
+    padding-top: 4rem;
+}
+
+.catty-icons i{
+    margin-right: 1rem;
+}
+
+.catty-title {
+    padding-top: 2rem;
+}
+
+.catty-info {
+    padding-top: 1rem;
+}
+
+.cloud_sync {
+    color: blue;
+    padding: 0.3rem;
+    border: 1px solid ;
+    text-decoration: none;
+}
+
+footer {
+    grid-column: 1 / -1;
+    background-color: #0f68a7;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.icons {
+    padding-top: 7vh;
+}
+
+.icons .las {
+    padding-right: 10rem;
+    cursor: pointer;
+}
+
+.catty-img-small {
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    height: 5rem;
+}
+
+.album {
+    display: flex;
+}
+
+.album_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
