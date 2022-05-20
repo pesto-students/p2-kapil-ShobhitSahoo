@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    font-size: 1.2rem;
+    height: 7rem;
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.user-nav {
+    align-self: stretch;
+    display: flex;
+    align-items: center; 
+}
+
+.user-nav > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center; 
+}
+
+.user-nav__notification:hover {
+    color: #28b485; 
+}
+
+.user-nav__icon-box {
+    position: relative; 
+    margin-top: 1.5rem;
+    margin-right: 3rem;
+}
+
+.user-nav__notification {
+    font-size: 1.5rem;
+    color: #222;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+
+
+
+
