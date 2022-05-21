@@ -22,6 +22,7 @@ header {
     align-self: stretch;
     display: flex;
     align-items: center;
+    margin-top: -1rem;
 }
 
 .user-nav > * {
@@ -49,6 +50,22 @@ header {
     display: flex;
     align-items: center;
     justify-content: center; 
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container > img {
+    height: 30rem;
+
+}
+
+.description > h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
 }
 
 .book {
@@ -162,9 +179,52 @@ header {
     opacity: 1;
 }
 
-.article-img > img {
-    height: 30rem;
-    width: 20rem;
+.articles {
+    padding: 2rem;
+}
+
+.articles > ul {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+grid-gap: 1rem;
+list-style-type: none;
+}
+  
+.articles > ul > li {
+    border: 1px solid #E2E2E2;
+    border-radius: .5rem;
+}
+
+.articles > ul > li > figure {
+    max-height: 30rem;
+    overflow: hidden;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    position: relative;
+}
+
+.articles > ul > li > figure > img {
+    width: 100%;
+}
+
+.articles > ul > li > figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+}
+
+.articles > ul > li > figure > figcaption > h3 {
+    color: white;
+    padding: .75rem;
+    font-size: 1.25rem;
+}
+
+.articles > ul > li > p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem .75rem;
+    color: #666666;
 }
 
 
