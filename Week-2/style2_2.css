@@ -34,6 +34,7 @@ header {
 
 .user-nav__notification:hover {
     color: #6C63FF; 
+    font-weight: bold;
 }
 
 .user-nav__icon-box {
@@ -92,7 +93,7 @@ main {
     padding: 6rem;
 }
 
-.heading-secondary {
+.book__heading {
     font-size: 2.5rem;
     text-transform: uppercase;
     margin-bottom: 2.5rem;
@@ -317,7 +318,16 @@ main {
     margin: 0% 1%;
 }
     
-    @media (max-width: 720px){
+@media (max-width: 720px){
+    .book {
+        flex-direction: column;
+        width: 80vw;
+    }
+
+    .form__group {
+        width: 100%;
+    }
+
     .footer{
         text-align: left;
         padding: 5%;
