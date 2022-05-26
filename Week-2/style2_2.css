@@ -1,0 +1,346 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+*::selection {
+    background-color: #6C63FF;
+    color: #fff;
+}
+
+header {
+    font-size: 1.2rem;
+    padding: 2rem;
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.user-nav {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    margin-top: -1rem;
+}
+
+.user-nav > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center; 
+}
+
+.user-nav__notification:hover {
+    color: #6C63FF; 
+    font-weight: bold;
+}
+
+.user-nav__icon-box {
+    position: relative; 
+    margin-right: 3rem;
+}
+
+.user-nav__notification {
+    font-size: 1.5rem;
+    color: #222;
+    position: absolute;
+    top: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.container > img {
+    height: 30rem;
+
+}
+
+.description > h2 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.book {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cover-img {
+    width: 50%;
+    height: 50%;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.cover-img > img {
+    width: 45rem;
+    height: 40rem;
+}
+
+.book__form {
+    width: 50%;
+    padding: 6rem;
+}
+
+.book__heading {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #6C63FF, #5643fa);
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+}
+
+.form__group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form__group:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+.form__input {
+    font-size: 1rem;
+    font-family: inherit;
+    padding: 1rem 1.5rem;
+    border-radius: 3px;
+    color: inherit;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-bottom: 5px solid transparent;
+    width: 90%;
+    display: block;
+    transition: all .3s;
+}
+
+.form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid #6C63FF;
+}
+
+.form__input:invalid {
+    border-bottom: 5px solid #ff7730;
+}
+
+.form__input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.form__label {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-left: 2rem;
+    margin-top: 0.7rem;
+    display: block;
+    transition: all .3s;
+}
+
+.form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-4rem);
+}
+
+.form__radio-group {
+    width: 49%;
+    display: inline-block;
+}
+
+.form__radio-label {
+    font-size: 1rem;
+    cursor: pointer;
+    position: relative;
+    padding-left: 4rem;
+}
+
+.form__radio-input {
+    display: none;
+}
+
+.form__radio-button {
+    height: 1rem;
+    width: 1rem;
+    border: 5px solid #6C63FF;
+    border-radius: 2rem;
+    display: inline-block;
+    position: absolute;
+    top: -6px;
+    left: 0;
+}
+
+.form__radio-button::after {
+    content: "";
+    display: block;
+    height: 0.75rem;
+    width: 0.75rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #6C63FF;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+    opacity: 1;
+}
+
+.btn__next {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    display: inline-block;
+    left: -10%;
+    margin-top: 7.5%;
+    border-radius: 10rem;
+    transition: all 0.2s;
+    position: relative;
+    border: none;
+    cursor: pointer;
+    background-color: #6C63FF;
+    color: #fff;
+}
+
+.btn__next:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0 ,0 , 0.4);
+    font-weight: 700;
+    background-color: #5643fa;
+}
+
+.btn__next:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.articles {
+    padding: 2rem;
+}
+
+.articles > ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    grid-gap: 3rem;
+    list-style-type: none;
+}
+  
+.articles > ul > li {
+    border: 1px solid #E2E2E2;
+    border-radius: .5rem;
+}
+
+.articles > ul > li > figure {
+    max-height: 30rem;
+    overflow: hidden;
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    position: relative;
+}
+
+.articles > ul > li > figure > img {
+    width: 100%;
+}
+
+.articles > ul > li > figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(0,0,0,.7);
+    width: 100%;
+}
+
+.articles > ul > li > figure > figcaption > h3 {
+    color: white;
+    padding: .75rem;
+    font-size: 1.25rem;
+}
+
+.articles > ul > li > p {
+    font-size: 1rem;
+    line-height: 1.5;
+    padding: 1rem .75rem;
+    color: #666666;
+}
+
+.footer{
+    background: #000;
+    padding: 2.5px 0px;
+    text-align: center;
+}
+    
+.footer .row {
+    width: 100%;
+    /* margin: 0.5rem 0; */
+    padding: 2rem 0;
+    color: #888;
+    font-size: 1rem;
+}
+    
+.footer .row a{
+    text-decoration: none;
+    color: #888;
+    transition: 0.5s;
+}
+    
+.footer .row a:hover{
+    color: #fff;
+}
+    
+.footer .row ul{
+    width: 100%;
+}
+    
+.footer .row ul li{
+    display: inline-block;
+    margin: 0px 2.5rem;
+}
+    
+.footer .row a i{
+    font-size: 2rem;
+    margin: 0% 1%;
+}
+    
+@media (max-width: 720px){
+    .book {
+        flex-direction: column;
+        width: 80vw;
+    }
+
+    .form__group {
+        width: 100%;
+    }
+
+    .footer{
+        text-align: left;
+        padding: 5%;
+    }
+    .footer .row ul li{
+        display: block;
+        margin: 1rem 0px;
+        text-align: left;
+    }
+    .footer .row a i{
+        margin: 0 1.5rem;
+    }
+}
+
+
+
