@@ -11,3 +11,4 @@ function vowelCount(str){
 }
 
 console.log(vowelCount('AaaEEEeeeiiiiuuuiiIIOOOOoooU'));
+console.log(vowelCount('qwrtplmn'));
