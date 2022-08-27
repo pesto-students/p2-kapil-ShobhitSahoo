@@ -1,0 +1,24 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/*Assets*/
+$black-color: #000;
+$white-color: #fff;
+
+.app-main {
+    
+    height: 100vh;
+
+    /*Layout*/
+    display: grid;
+    place-items: center;
+
+    @import './home.scss';
+    @import './todolist.scss';
+}
